@@ -1,8 +1,18 @@
 import Head from "next/head";
-import {useSelector } from "react-redux";
+import {useDispatch} from "react-redux";
+import {useEffect} from "react";
+import axios from "axios";
+import {setData} from "@/redux/reducers/content";
 
 export default function Home() {
+    const dispatch = useDispatch();
     // const {users} = useSelector((state) => state.content);
+
+    useEffect(() => {
+        axios.get("https://jsonplaceholder.typicode.com/todos")
+            .then((res) => dispatch(setData(res.data)))
+            .catch((err) => console.log('ERR ---> ', err))
+    },[]);
 
     return (
         <>

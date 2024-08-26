@@ -3,12 +3,14 @@ import {createSlice } from "@reduxjs/toolkit";
 const contentSlice = createSlice({
     name: "content",
     initialState: {
-        users: 11
+        data: 11
     },
     reducers: {
-
-    },
+        setData: (state, action) => {
+            state.data = action.payload;
+        }
+    }
 });
 
-export const {} = contentSlice.actions;
+export const {setData} = contentSlice.actions;
 export default contentSlice.reducer;
