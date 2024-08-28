@@ -1,12 +1,18 @@
 import Head from "next/head";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import axios from "axios";
 import {setData} from "@/redux/reducers/content";
+import Authorization from "@/components/authorization/Authorization";
+import {CSSTransition, SwitchTransition} from "react-transition-group";
 
 export default function Home() {
     const dispatch = useDispatch();
-    // const {users} = useSelector((state) => state.content);
+    const {users, page} = useSelector((state) => state.content);
+
+    const component = {
+        authorization: <Authorization/>
+    }
 
     useEffect(() => {
         axios.get("https://jsonplaceholder.typicode.com/todos")
@@ -23,7 +29,13 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={`main`}>
-
+                <SwitchTransition>
+                    <CSSTransition key={page} timeout={300} classNames={'page'}>
+                        <div className={'page'}>
+                            {component[page]}
+                        </div>
+                    </CSSTransition>
+                </SwitchTransition>
             </main>
         </>
     );
