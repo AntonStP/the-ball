@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(Authorization): компонент для формы">
-      <change afterPath="$PROJECT_DIR$/src/components/button/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/button/Button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/Form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/Form.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/content.js" afterDir="false" />
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(Authorization): страница авторизации">
+      <change afterPath="$PROJECT_DIR$/src/styles/form-styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authorization/Authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authorization/Authorization.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/Form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/content.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "D:/my-projects/the-ball/src/components",
+    "last_opened_file_path": "D:/my-projects/the-ball/src/styles",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,6 +65,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\my-projects\the-ball\src\styles" />
       <recent name="D:\my-projects\the-ball\src\components" />
       <recent name="D:\my-projects\the-ball\public" />
       <recent name="D:\my-projects\the-ball\my-app\src\redux" />
@@ -122,7 +114,7 @@
       <workItem from="1723558496619" duration="3152000" />
       <workItem from="1724674104858" duration="8737000" />
       <workItem from="1724749780673" duration="8000" />
-      <workItem from="1724843900154" duration="2785000" />
+      <workItem from="1724843900154" duration="5354000" />
     </task>
     <task id="LOCAL-00001" summary="chore: исправлена структура проекта">
       <option name="closed" value="true" />
@@ -156,7 +148,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724690875657</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="chore(Button): компонент для кнопки">
+      <option name="closed" value="true" />
+      <created>1724850151557</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724850151557</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore(Form): компонент для формы">
+      <option name="closed" value="true" />
+      <created>1724850175521</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724850175521</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore(Authorization): страница авторизации">
+      <option name="closed" value="true" />
+      <created>1724850198526</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724850198526</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +194,9 @@
     <MESSAGE value="chore: прокинут стор" />
     <MESSAGE value="chore(): запрос данных" />
     <MESSAGE value="chore(Authorization): компонент для формы" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(Authorization): компонент для формы" />
+    <MESSAGE value="chore(Button): компонент для кнопки" />
+    <MESSAGE value="chore(Form): компонент для формы" />
+    <MESSAGE value="chore(Authorization): страница авторизации" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(Authorization): страница авторизации" />
   </component>
 </project>

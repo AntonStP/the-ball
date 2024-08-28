@@ -3,10 +3,9 @@ export const formContent = {
         {
             name: 'username',
             type: 'text',
-        },
-        {
-            name: 'password',
-            type: 'password',
+            registerOptions: {
+                required: "Поле обязательно к заполнению"
+            }
         }
     ],
     button: {
