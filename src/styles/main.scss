@@ -3,11 +3,13 @@
 @import "./../components/button/Button";
 @import "./../components/authorization/Authorization";
 @import "./../components/form/Form";
+@import "./../components/game/Game";
 
 .main {
   position: relative;
   width: 100%;
   height: 100%;
+  background: #1d1a2c;
 }
 
 .page {

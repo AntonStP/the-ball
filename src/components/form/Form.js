@@ -1,40 +1,53 @@
 import {useForm} from "react-hook-form";
 import {formContent} from "@/constants/content";
 import Button from "@/components/button/Button";
+import axios from "axios";
+import {useDispatch} from "react-redux";
+import {setPage, setUser} from "@/redux/reducers/content";
 
 
 export default function Form(props) {
+    const dispatch = useDispatch();
     const {inputs, button} = formContent;
     const {
         register,
         formState: {
-            errors
+            errors, isValid
         },
-        handleSubmit
-    } = useForm();
+        handleSubmit,
+        reset
+    } = useForm({mode: "onBlur",});
 
     const onSubmit = (data) => {
         console.log(JSON.stringify(data));
-    }
+        axios.post('https://dummyjson.com/auth/login',data, {
+            headers: { 'Content-Type': 'application/json' },
+        })
+            .then((res) => {
+                dispatch(setUser(res.data));
+                window.localStorage.setItem('user', JSON. stringify(res.data))
+                dispatch(setPage('game'))
+            })
+            .catch((err) => console.log('ERR ---> ', err))
+        reset();
+    };
 
-    console.log('errors', errors);
 
     return (
-        <form className="form" onClick={handleSubmit(onSubmit)}>
-            {inputs.map(({name, registerOptions}, id) => (
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+            {inputs.map(({name,registerOptions, ...rest}, id) => (
                 <div className={"form__input"} key={`input-${id}`}>
                     <label>
-                        name
-                        <input {...register(name, {
-                            ...registerOptions
-                        })}/>
+                        {name}
+                        <input {...rest} {...register(name, registerOptions)}/>
                     </label>
-                    {errors[name] && (
-                        <div className={"form__error"}>{errors[name]?.message || 'Ошибка'}</div>)
-                    }
+                    <div className={"form__error"}>
+                        {errors[name] &&
+                            <span className={'form__error-text'}>{errors[name]?.message || 'Ошибка'}</span>}
+                    </div>
                 </div>
             ))}
-            <Button {...button.attr}/>
+            <Button {...button.attr} disabled={!isValid}/>
         </form>
     )
 }

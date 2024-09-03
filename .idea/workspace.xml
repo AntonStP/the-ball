@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(Authorization): страница авторизации">
-      <change afterPath="$PROJECT_DIR$/src/styles/form-styles.scss" afterDir="false" />
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(Form): добавлено поле и обрабока ошибок">
+      <change afterPath="$PROJECT_DIR$/src/components/game/Game.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/game/Game.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authorization/Authorization.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/Button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/Form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/form-styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/form-styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "D:/my-projects/the-ball/src/styles",
+    "last_opened_file_path": "D:/my-projects/the-ball/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,8 +67,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\my-projects\the-ball\src\styles" />
       <recent name="D:\my-projects\the-ball\src\components" />
+      <recent name="D:\my-projects\the-ball\src\styles" />
       <recent name="D:\my-projects\the-ball\public" />
       <recent name="D:\my-projects\the-ball\my-app\src\redux" />
     </key>
@@ -114,7 +116,8 @@
       <workItem from="1723558496619" duration="3152000" />
       <workItem from="1724674104858" duration="8737000" />
       <workItem from="1724749780673" duration="8000" />
-      <workItem from="1724843900154" duration="5354000" />
+      <workItem from="1724843900154" duration="5448000" />
+      <workItem from="1725353538611" duration="6604000" />
     </task>
     <task id="LOCAL-00001" summary="chore: исправлена структура проекта">
       <option name="closed" value="true" />
@@ -172,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724850198526</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="chore(Form): добавлено поле и обрабока ошибок">
+      <option name="closed" value="true" />
+      <created>1724852714650</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724852714650</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +208,7 @@
     <MESSAGE value="chore(Button): компонент для кнопки" />
     <MESSAGE value="chore(Form): компонент для формы" />
     <MESSAGE value="chore(Authorization): страница авторизации" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(Authorization): страница авторизации" />
+    <MESSAGE value="chore(Form): добавлено поле и обрабока ошибок" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(Form): добавлено поле и обрабока ошибок" />
   </component>
 </project>

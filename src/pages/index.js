@@ -5,13 +5,15 @@ import axios from "axios";
 import {setData} from "@/redux/reducers/content";
 import Authorization from "@/components/authorization/Authorization";
 import {CSSTransition, SwitchTransition} from "react-transition-group";
+import Game from "@/components/game/Game";
 
 export default function Home() {
     const dispatch = useDispatch();
-    const {users, page} = useSelector((state) => state.content);
+    const {page} = useSelector((state) => state.content);
 
     const component = {
-        authorization: <Authorization/>
+        authorization: <Authorization/>,
+        game: <Game/>
     }
 
     useEffect(() => {

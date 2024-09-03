@@ -12,12 +12,16 @@ const contentSlice = createSlice({
         },
         setData: (state, action) => {
             state.data = action.payload;
+        },
+        setUser: (state, action) => {
+            state.user = action.payload;
         }
     }
 });
 
 export const {
     setPage,
-    setData
+    setData,
+    setUser
 } = contentSlice.actions;
 export default contentSlice.reducer;
