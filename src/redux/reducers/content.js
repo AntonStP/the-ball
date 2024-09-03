@@ -3,7 +3,7 @@ import {createSlice } from "@reduxjs/toolkit";
 const contentSlice = createSlice({
     name: "content",
     initialState: {
-        page: "authorization",
+        page: "game",
         data: 11
     },
     reducers: {

@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(Form): добавлено поле и обрабока ошибок">
-      <change afterPath="$PROJECT_DIR$/src/components/game/Game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/game/Game.scss" afterDir="false" />
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(Game): сцена с мячиком">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authorization/Authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/Game.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/Game.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/form-styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/form-styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +115,7 @@
       <workItem from="1724674104858" duration="8737000" />
       <workItem from="1724749780673" duration="8000" />
       <workItem from="1724843900154" duration="5448000" />
-      <workItem from="1725353538611" duration="6604000" />
+      <workItem from="1725353538611" duration="21744000" />
     </task>
     <task id="LOCAL-00001" summary="chore: исправлена структура проекта">
       <option name="closed" value="true" />
@@ -183,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724852714650</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chore(Form): валидация формы, отправка, запись, переход на некст экран">
+      <option name="closed" value="true" />
+      <created>1725360251960</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725360251960</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +215,8 @@
     <MESSAGE value="chore(Form): компонент для формы" />
     <MESSAGE value="chore(Authorization): страница авторизации" />
     <MESSAGE value="chore(Form): добавлено поле и обрабока ошибок" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(Form): добавлено поле и обрабока ошибок" />
+    <MESSAGE value="chore(Form): валидация формы, отправка, запись, переход на некст экран" />
+    <MESSAGE value="chore(Game): сцена с мячиком" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(Game): сцена с мячиком" />
   </component>
 </project>

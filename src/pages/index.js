@@ -33,9 +33,9 @@ export default function Home() {
             <main className={`main`}>
                 <SwitchTransition>
                     <CSSTransition key={page} timeout={300} classNames={'page'}>
-                        <div className={'page'}>
+                        <section className={'page'}>
                             {component[page]}
-                        </div>
+                        </section>
                     </CSSTransition>
                 </SwitchTransition>
             </main>
