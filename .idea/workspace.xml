@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(utils): нормально растянута текстура земли">
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(utils): отделена анимация">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/utils.js" afterDir="false" />
     </list>
@@ -113,7 +113,7 @@
       <workItem from="1725353538611" duration="21852000" />
       <workItem from="1725439317077" duration="6964000" />
       <workItem from="1725526289366" duration="30000" />
-      <workItem from="1725543727909" duration="8274000" />
+      <workItem from="1725543727909" duration="9761000" />
     </task>
     <task id="LOCAL-00001" summary="chore: исправлена структура проекта">
       <option name="closed" value="true" />
@@ -211,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725550617922</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="chore(utils): отделена анимация">
+      <option name="closed" value="true" />
+      <created>1725552259833</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725552259833</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +249,7 @@
     <MESSAGE value="chore(Game): сцена с мячиком" />
     <MESSAGE value="chore(Game): вынесена логика, добавлена земелька" />
     <MESSAGE value="chore(utils): нормально растянута текстура земли" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(utils): нормально растянута текстура земли" />
+    <MESSAGE value="chore(utils): отделена анимация" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(utils): отделена анимация" />
   </component>
 </project>

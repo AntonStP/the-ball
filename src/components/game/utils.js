@@ -74,23 +74,20 @@ export const addBall = (app) => {
 }
 
 export const animation = (app) => {
+    const timeline = gsap.timeline();
     const ball = app.stage.getChildByName("ball");
 
+
     ball.on('pointerdown', () => {
-        gsap.to(ball, {
+        timeline.to(ball, {
             y: ball.y - app.screen.height / 2,
             duration: 0.5,
             ease: 'power2.out',
-            onComplete: () => {
-                gsap.to(ball, {
-                    y: ball.y + app.screen.height / 2,
-                    duration: 0.5,
-                    ease: 'bounce.out',
-                    onComplete: () => {
-                        console.log('Прыжок завершен!');
-                    }
-                });
-            }
         })
+        timeline.to(ball, {
+            y: ball.y,
+            duration: 0.5,
+            ease: 'bounce.out',
+        });
     });
 }
