@@ -11,6 +11,8 @@ export const initApp = (sceneRef, appRef) => {
         .then(() => {
             addGround(app);
             addBall(app);
+
+            animation(app);
         });
 
 };
@@ -55,6 +57,7 @@ export const addGround = (app) => {
 
 export const addBall = (app) => {
     const ball = Sprite.from('ball');
+    ball.name = 'ball';
 
     const { width, height } = app.screen;
 
@@ -68,6 +71,10 @@ export const addBall = (app) => {
     ball.y = app.screen.height - ball.height / 2 - height*.125;
 
     app.stage.addChild(ball);
+}
+
+export const animation = (app) => {
+    const ball = app.stage.getChildByName("ball");
 
     ball.on('pointerdown', () => {
         gsap.to(ball, {
