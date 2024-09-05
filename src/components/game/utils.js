@@ -19,7 +19,7 @@ export const initApp = (sceneRef, appRef) => {
 
 export const setup = (sceneRef, app) => {
     console.log('app', app);
-    app.init({background: '#1099bb', resizeTo: window})
+    app.init({background: '#89cee3', resizeTo: window})
         .then(() => {
             sceneRef.current.appendChild(app.canvas);
         });
@@ -34,34 +34,40 @@ export const preload = () => {
 }
 
 export const addGround = (app) => {
-    const background = Texture.from('background');
-    const {width, height} = app.screen;
+    const backgroundTexture = Texture.from('background');
+    const { width, height } = app.screen;
 
-    const tilingBackground = new TilingSprite(
-        background, width, height / 3
-    );
+    const groundHeight = height * .2;
 
-    console.log('tilingSprite', tilingBackground);
+    const tilingBackground = new TilingSprite({
+        texture: backgroundTexture,
+        width: width,
+        height: groundHeight
+    });
 
-    app.stage.addChild(tilingBackground)
-
-    tilingBackground.anchor.set(0,1);
+    tilingBackground.tileScale =.15;
+    tilingBackground.anchor.set(0, 1);
     tilingBackground.x = 0;
     tilingBackground.y = height;
+
+    app.stage.addChild(tilingBackground);
 }
 
 export const addBall = (app) => {
     const ball = Sprite.from('ball');
-    app.stage.addChild(ball);
+
+    const { width, height } = app.screen;
 
     ball.interactive = true;
     ball.buttonMode = true;
 
     ball.anchor.set(.5);
-    ball.width = app.screen.width / 10;
-    ball.height = app.screen.width / 10;
+    ball.width = app.screen.width / 13;
+    ball.height = app.screen.width / 13;
     ball.x = app.screen.width / 2;
-    ball.y = app.screen.height - ball.height / 2;
+    ball.y = app.screen.height - ball.height / 2 - height*.125;
+
+    app.stage.addChild(ball);
 
     ball.on('pointerdown', () => {
         gsap.to(ball, {
