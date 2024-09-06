@@ -3,8 +3,9 @@ import {createSlice } from "@reduxjs/toolkit";
 const contentSlice = createSlice({
     name: "content",
     initialState: {
-        page: "game",
-        data: 11
+        page: "authorization",
+        data: null,
+        currentTitle: '',
     },
     reducers: {
         setPage: (state, action) => {
@@ -15,13 +16,34 @@ const contentSlice = createSlice({
         },
         setUser: (state, action) => {
             state.user = action.payload;
+        },
+        setCurrentTitle: (state) => {
+            const data = state.data;
+            if(data === null) return;
+            if(state.data?.length===1) {
+                state.currentTitle = data[0].title;
+                return;
+            }
+
+            const index = selectIndex(state.data);
+
+            state.data = [...data.slice(0,index), ...data.slice(index+1, data.length)];
+            state.currentTitle = data[index].title;
         }
+
     }
 });
+
+
+const selectIndex = (arr) => {
+    console.log(arr)
+    return  Math.floor(Math.random() * arr.length);
+}
 
 export const {
     setPage,
     setData,
-    setUser
+    setUser,
+    setCurrentTitle
 } = contentSlice.actions;
 export default contentSlice.reducer;

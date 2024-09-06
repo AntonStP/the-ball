@@ -1,8 +1,9 @@
 import {Application, Assets, Graphics, Sprite, Texture, TilingSprite} from 'pixi.js';
 import gsap from "gsap";
+import {setCurrentTitle} from "@/redux/reducers/content";
 
 
-export const initApp = (sceneRef, appRef) => {
+export const initApp = (sceneRef, appRef, setCurrentTitle) => {
     const app = new Application();
     appRef.current = app;
 
@@ -13,7 +14,7 @@ export const initApp = (sceneRef, appRef) => {
             addShadow(app);
             addBall(app);
 
-            animation(app);
+            animation(app, setCurrentTitle);
         });
 
 };
@@ -90,7 +91,7 @@ export const addBall = (app) => {
     app.stage.addChild(ball);
 }
 
-export const animation = (app) => {
+export const animation = (app, setCurrentTitle) => {
     const ball = app.stage.getChildByName("ball");
     const shadow = app.stage.getChildByName("shadow");
     const timeline = gsap.timeline();
@@ -108,8 +109,8 @@ export const animation = (app) => {
         }, 'jump');
         timeline.to(ball.scale, {
             keyframes: [
-                { x: .3, y: .7, duration: .1, ease: 'power1.out' },
-                { x: .3, y: .3, duration: .1, ease: 'bounce.out' }
+                { x: .3, y: .5, duration: .1, ease: 'power1.out' },
+                { x: .3, y: .3, duration: .2, ease: 'bounce.out' }
             ],
         }, 'jump+=0');
         timeline.to(ball, {
@@ -121,7 +122,10 @@ export const animation = (app) => {
             y: ball.y,
             duration: .5,
             ease: 'bounce.out',
-            onComplete: () => ball.interactive = true
+            onComplete: () => {
+                ball.interactive = true;
+                setCurrentTitle();
+            }
         },"jump+=.5");
 
         //SHADOW
