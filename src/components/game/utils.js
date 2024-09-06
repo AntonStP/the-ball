@@ -65,8 +65,8 @@ export const addBall = (app) => {
     ball.buttonMode = true;
 
     ball.anchor.set(.5);
-    ball.width = app.screen.width / 13;
-    ball.height = app.screen.width / 13;
+    ball.width = 150;
+    ball.height = 150;
     ball.x = app.screen.width / 2;
     ball.y = app.screen.height - ball.height / 2 - height*.125;
 
@@ -74,20 +74,35 @@ export const addBall = (app) => {
 }
 
 export const animation = (app) => {
-    const timeline = gsap.timeline();
     const ball = app.stage.getChildByName("ball");
+    const timeline = gsap.timeline();
 
 
     ball.on('pointerdown', () => {
+        timeline.clear();
+        ball.interactive = false;
+
         timeline.to(ball, {
-            y: ball.y - app.screen.height / 2,
-            duration: 0.5,
+            y: ball.y - app.screen.height / 3*2,
+            duration: .5,
             ease: 'power2.out',
-        })
+        }, 'jump')
+        timeline.to(ball.scale, {
+            keyframes: [
+                { x: .3, y: .7, duration: .1, ease: 'power1.out' },
+                { x: .3, y: .3, duration: .1, ease: 'bounce.out' }
+            ],
+        }, 'jump+=0');
+        timeline.to(ball, {
+            rotation: ball.rotation + 6.283,
+            duration: .8,
+            ease: 'out',
+        },"jump+=.2");
         timeline.to(ball, {
             y: ball.y,
-            duration: 0.5,
+            duration: .5,
             ease: 'bounce.out',
-        });
+            onComplete: () => ball.interactive = true
+        },"jump+=.5");
     });
 }
