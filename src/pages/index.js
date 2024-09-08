@@ -2,7 +2,7 @@ import Head from "next/head";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import axios from "axios";
-import {setData} from "@/redux/reducers/content";
+import {setData, setPage} from "@/redux/reducers/content";
 import Authorization from "@/components/authorization/Authorization";
 import {CSSTransition, SwitchTransition} from "react-transition-group";
 import Game from "@/components/game/Game";
@@ -20,7 +20,11 @@ export default function Home() {
         axios.get("https://jsonplaceholder.typicode.com/todos")
             .then((res) => dispatch(setData(res.data)))
             .catch((err) => console.log('ERR ---> ', err))
+
+        const user = JSON.parse(window?.localStorage?.getItem('user'));
+        if (user) dispatch(setPage('game'));
     },[]);
+
 
     return (
         <>
