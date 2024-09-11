@@ -18,6 +18,7 @@ const contentSlice = createSlice({
             state.user = action.payload;
         },
         setCurrentTitle: (state) => {
+            //TODO: обновить массив, когда закончится
             const data = state.data;
             if(data === null) return;
             if(state.data?.length===1) {
@@ -36,7 +37,6 @@ const contentSlice = createSlice({
 
 
 const selectIndex = (arr) => {
-    console.log(arr)
     return  Math.floor(Math.random() * arr.length);
 }
 

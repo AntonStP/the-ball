@@ -1,9 +1,12 @@
 import {Application, Assets, Graphics, Sprite, Texture, TilingSprite} from 'pixi.js';
 import gsap from "gsap";
-import {setCurrentTitle} from "@/redux/reducers/content";
 
 
 export const initApp = (sceneRef, appRef, setCurrentTitle) => {
+    //TODO: отдельно подгрузить gsap и pixi.js(динамеческий ипрорт)
+    //TODO: ресайз (stage тянуть)
+    //TODO: переделать на ООП
+
     const app = new Application();
     appRef.current = app;
 
@@ -49,7 +52,7 @@ export const addGround = (app) => {
         height: groundHeight
     });
 
-    tilingBackground.tileScale =.15;
+    tilingBackground.tileScale =.4;
     tilingBackground.anchor.set(0, 1);
     tilingBackground.x = 0;
     tilingBackground.y = height;
@@ -67,7 +70,7 @@ export const addShadow = (app) => {
     shadow.fill();
 
     shadow.x = width/2;
-    shadow.y = app.screen.height - shadow.height / 2 - height*.125;
+    shadow.y = app.screen.height - shadow.height / 2 - height*.105;
 
     app.stage.addChild(shadow);
 }
@@ -83,10 +86,11 @@ export const addBall = (app) => {
     ball.buttonMode = true;
 
     ball.anchor.set(.5);
-    ball.width = 150;
-    ball.height = 150;
+    ball.width = 300;
+    ball.height = 300;
+    ball.scale = .5;
     ball.x = app.screen.width / 2;
-    ball.y = app.screen.height - ball.height / 2 - height*.13;
+    ball.y = app.screen.height - ball.height / 2 - height*.112;
 
     app.stage.addChild(ball);
 }
@@ -103,14 +107,14 @@ export const animation = (app, setCurrentTitle) => {
 
         //BALL
         timeline.to(ball, {
-            y: ball.y - app.screen.height / 3*2,
+            y: ball.y - app.screen.height / 9*5,
             duration: .5,
             ease: 'power2.out',
         }, 'jump');
         timeline.to(ball.scale, {
             keyframes: [
-                { x: .3, y: .5, duration: .1, ease: 'power1.out' },
-                { x: .3, y: .3, duration: .2, ease: 'bounce.out' }
+                { x: .5, y: .8, duration: .1, ease: 'power1.out' },
+                { x: .5, y: .5, duration: .2, ease: 'bounce.out' },
             ],
         }, 'jump+=0');
         timeline.to(ball, {
@@ -120,7 +124,7 @@ export const animation = (app, setCurrentTitle) => {
         },"jump+=.2");
         timeline.to(ball, {
             y: ball.y,
-            duration: .5,
+            duration: .7,
             ease: 'bounce.out',
             onComplete: () => {
                 ball.interactive = true;
@@ -131,8 +135,8 @@ export const animation = (app, setCurrentTitle) => {
         //SHADOW
         timeline.to(shadow, {alpha: 0, duration: .5, ease: 'power2.out',}, 'jump+=0');
         timeline.to(shadow.scale, {x: .5, duration: .5, ease: 'power2.out',}, 'jump+=0');
-        timeline.to(shadow, {alpha: 1, duration: .5, ease: 'bounce.out',}, 'jump+=.5');
-        timeline.to(shadow.scale, {x: 1, duration: .5, ease: 'bounce.out',}, 'jump+=.5');
+        timeline.to(shadow, {alpha: 1, duration: .7, ease: 'bounce.out',}, 'jump+=.5');
+        timeline.to(shadow.scale, {x: 1, duration: .7, ease: 'bounce.out',}, 'jump+=.5');
 
     });
 }

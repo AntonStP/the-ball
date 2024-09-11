@@ -7,6 +7,10 @@ import {setPage, setUser} from "@/redux/reducers/content";
 
 
 export default function Form(props) {
+    //TODO: использовать форму из шаблона
+    //TODO: запрос через slice Requests из шаблона
+    //TODO: try catch на локал сторадж
+
     const dispatch = useDispatch();
     const {inputs, button} = formContent;
     const {
