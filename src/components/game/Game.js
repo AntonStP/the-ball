@@ -1,5 +1,5 @@
 import {useEffect, useRef} from "react";
-import {initApp} from "@/components/game/utils";
+import {App} from "@/components/game/app";
 import {useDispatch, useSelector} from "react-redux";
 import {setCurrentTitle} from "@/redux/reducers/content";
 import {CSSTransition, SwitchTransition} from "react-transition-group";
@@ -14,7 +14,7 @@ export default function Game(props) {
 
     useEffect(() => {
         if (appRef.current) return;
-        initApp(sceneRef, appRef, ()=> dispatch(setCurrentTitle(currentTitle)));
+        new App(sceneRef, appRef, ()=> dispatch(setCurrentTitle(currentTitle)));
     }, []);
 
 
