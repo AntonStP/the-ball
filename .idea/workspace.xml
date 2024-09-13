@@ -4,44 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(): сцена переделана под ООП">
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/AjaxForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/Attachment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/Checkbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/FileInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/Form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/LabelInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/MultiplyInputs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/Radio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/RadioGroup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/Select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/TextAreaInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/Validations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/adapters/AxiosAdapter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/adapters/AxiosDataAdapter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/adapters/FetchAdapter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseComponents/form/adapters/FetchJsonAdapter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/form.js" afterDir="false" />
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="feat(): добавлен компонент для формы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/braces/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/braces/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fill-range/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fill-range/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-extglob/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-extglob/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-glob/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-glob/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-number/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map-js/lib/source-map-consumer.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map-js/lib/source-map-consumer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map-js/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map-js/source-map.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map-js/source-map.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/to-regex-range/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/to-regex-range/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authorization/Authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +119,7 @@
       <workItem from="1726059572488" duration="3491000" />
       <workItem from="1726141178961" duration="2772000" />
       <workItem from="1726219544561" duration="35000" />
+      <workItem from="1726222238012" duration="1255000" />
     </task>
     <task id="LOCAL-00001" summary="chore: исправлена структура проекта">
       <option name="closed" value="true" />
@@ -299,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726062479447</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat(): добавлен компонент для формы">
+      <option name="closed" value="true" />
+      <created>1726222485264</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726222485264</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +309,7 @@
     <MESSAGE value="chore(utils): добавлена и анимирована тень" />
     <MESSAGE value="chore(Game): замена заголовков" />
     <MESSAGE value="chore(): замена текстурок" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(): замена текстурок" />
+    <MESSAGE value="feat(): добавлен компонент для формы" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): добавлен компонент для формы" />
   </component>
 </project>

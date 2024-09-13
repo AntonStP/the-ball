@@ -1,9 +1,8 @@
-import {Application, Assets, Graphics, Sprite, Texture, TilingSprite} from 'pixi.js';
-import gsap from "gsap";
+const {Application, Assets, Graphics, Sprite, Texture, TilingSprite} = await import('pixi.js');
+const {gsap} = await import('gsap');
 
 
 export class App {
-    //TODO: отдельно подгрузить gsap и pixi.js(динамеческий ипрорт)
     //TODO: ресайз (stage тянуть)
 
     constructor(sceneRef, appRef, setCurrentTitle) {
