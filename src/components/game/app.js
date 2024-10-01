@@ -10,10 +10,17 @@ export class App {
         this.appRef = appRef;
         this.setCurrentTitle = setCurrentTitle;
 
+        // Базовый размер холста
+        this.width = 1920;
+        this.height = 1080;
+
         this.app = new Application();
         this.appRef.current = this.app;
 
         this.init();
+        this.resize = this.resize.bind(this);
+        window.addEventListener('resize', this.resize);
+        this.resize();
     }
 
 
@@ -30,7 +37,12 @@ export class App {
     }
 
     setup() {
-        this.app.init({background: '#89cee3', resizeTo: window})
+        this.app.init({
+            resizeTo: window,
+            width: this.width,
+            height: this.height,
+            background: '#89cee3'
+        })
             .then(() => {
                 this.sceneRef.current.appendChild(this.app.canvas);
             });
@@ -46,35 +58,32 @@ export class App {
 
     addGround() {
         const backgroundTexture = Texture.from('background');
-        const { width, height } = this.app.screen;
 
-        const groundHeight = height * .2;
+        const groundHeight = this.height * .3;
 
         const tilingBackground = new TilingSprite({
             texture: backgroundTexture,
-            width: width,
+            width: this.width,
             height: groundHeight
         });
 
-        tilingBackground.tileScale =.4;
-        tilingBackground.anchor.set(0, 1);
-        tilingBackground.x = 0;
-        tilingBackground.y = height;
+        tilingBackground.tileScale.set(.67);
+        tilingBackground.anchor.set(.5, 0);
+        tilingBackground.x = this.width / 2;
+        tilingBackground.y = this.height - groundHeight;
 
         this.app.stage.addChild(tilingBackground);
     }
 
     addShadow() {
-        const { width, height } = this.app.screen;
-
         const shadow = new Graphics();
-        shadow.name ='shadow';
+        shadow.name = 'shadow';
         shadow.fill(0x000000, .2);
-        shadow.ellipse(0, 0, 60, 10); // Параметры: x, y, ширина, высота
+        shadow.ellipse(0, 0, 70, 12); // Параметры: x, y, ширина, высота
         shadow.fill();
 
-        shadow.x = width/2;
-        shadow.y = this.app.screen.height - shadow.height / 2 - height*.105;
+        shadow.x = this.width / 2;
+        shadow.y = this.height - shadow.height / 2 - this.height * .187;
 
         this.app.stage.addChild(shadow);
     }
@@ -83,17 +92,15 @@ export class App {
         const ball = Sprite.from('ball');
         ball.name = 'ball';
 
-        const { width, height } = this.app.screen;
-
         ball.interactive = true;
         ball.buttonMode = true;
 
         ball.anchor.set(.5);
-        ball.width = 300;
-        ball.height = 300;
-        ball.scale = .5;
-        ball.x = this.app.screen.width / 2;
-        ball.y = this.app.screen.height - ball.height / 2 - height*.112;
+        ball.width = this.width * .7;
+        ball.height = this.width * .7;
+        ball.scale = .65;
+        ball.x = this.width / 2;
+        ball.y = this.height - ball.height / 2 - this.height * .195;
 
         this.app.stage.addChild(ball);
     }
@@ -110,21 +117,21 @@ export class App {
 
             //BALL
             timeline.to(ball, {
-                y: ball.y - this.app.screen.height / 9*5,
+                y: ball.y - this.height / 9 * 5,
                 duration: .5,
                 ease: 'power2.out',
             }, 'jump');
             timeline.to(ball.scale, {
                 keyframes: [
-                    { x: .5, y: .8, duration: .1, ease: 'power1.out' },
-                    { x: .5, y: .5, duration: .2, ease: 'bounce.out' },
+                    {x: .65, y: .8, duration: .1, ease: 'power1.out'},
+                    {x: .65, y: .65, duration: .2, ease: 'bounce.out'},
                 ],
             }, 'jump+=0');
             timeline.to(ball, {
                 rotation: ball.rotation + 6.283,
                 duration: .8,
                 ease: 'out'
-            },"jump+=.2");
+            }, "jump+=.2");
             timeline.to(ball, {
                 y: ball.y,
                 duration: .7,
@@ -133,7 +140,7 @@ export class App {
                     ball.interactive = true;
                     this.setCurrentTitle();
                 }
-            },"jump+=.5");
+            }, "jump+=.5");
 
             //SHADOW
             timeline.to(shadow, {alpha: 0, duration: .5, ease: 'power2.out',}, 'jump+=0');
@@ -142,6 +149,20 @@ export class App {
             timeline.to(shadow.scale, {x: 1, duration: .7, ease: 'bounce.out',}, 'jump+=.5');
 
         });
+    }
+
+    resize() {
+        const newWidth = window.innerWidth;
+        const newHeight  = window.innerHeight;
+
+        const scaleX = newWidth / this.width;
+        const scaleY = newHeight / this.height;
+        const scale = Math.max(scaleX, scaleY);
+
+        this.app.stage.scale.set(scale);
+
+        this.app.stage.x = (newWidth - this.width * scale) / 2;
+        this.app.stage.y = newHeight - this.height * scale;
     }
 
 }
