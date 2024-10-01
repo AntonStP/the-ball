@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(): динамический импорт pixi и gsap">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(app): скейл стейджа при ресайзе">
       <change beforePath="$PROJECT_DIR$/src/components/game/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726222485264</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="chore(app): скейл стейджа при ресайзе">
+      <option name="closed" value="true" />
+      <created>1727791150649</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1727791150650</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +317,7 @@
     <MESSAGE value="chore(Game): замена заголовков" />
     <MESSAGE value="chore(): замена текстурок" />
     <MESSAGE value="feat(): добавлен компонент для формы" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): добавлен компонент для формы" />
+    <MESSAGE value="chore(app): скейл стейджа при ресайзе" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(app): скейл стейджа при ресайзе" />
   </component>
 </project>

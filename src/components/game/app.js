@@ -3,8 +3,6 @@ const {gsap} = await import('gsap');
 
 
 export class App {
-    //TODO: ресайз (stage тянуть)
-
     constructor(sceneRef, appRef, setCurrentTitle) {
         this.sceneRef = sceneRef;
         this.appRef = appRef;
