@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(app): скейл стейджа при ресайзе">
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(app): убрана туду">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +45,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/my-projects/the-ball/src/constants&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WORK/tests/aleksandr-bykov/peppers-project-main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -119,6 +120,7 @@
       <workItem from="1726141178961" duration="2772000" />
       <workItem from="1726219544561" duration="35000" />
       <workItem from="1726222238012" duration="1255000" />
+      <workItem from="1727795672940" duration="530000" />
     </task>
     <task id="LOCAL-00001" summary="chore: исправлена структура проекта">
       <option name="closed" value="true" />
@@ -280,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727791150650</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="chore(app): убрана туду">
+      <option name="closed" value="true" />
+      <created>1727791228916</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1727791228916</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +328,7 @@
     <MESSAGE value="chore(): замена текстурок" />
     <MESSAGE value="feat(): добавлен компонент для формы" />
     <MESSAGE value="chore(app): скейл стейджа при ресайзе" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(app): скейл стейджа при ресайзе" />
+    <MESSAGE value="chore(app): убрана туду" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(app): убрана туду" />
   </component>
 </project>

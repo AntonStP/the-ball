@@ -77,7 +77,7 @@ export class App {
         const shadow = new Graphics();
         shadow.name = 'shadow';
         shadow.fill(0x000000, .2);
-        shadow.ellipse(0, 0, 70, 12); // Параметры: x, y, ширина, высота
+        shadow.ellipse(0, 0, 60, 10); // Параметры: x, y, ширина, высота
         shadow.fill();
 
         shadow.x = this.width / 2;
@@ -94,11 +94,9 @@ export class App {
         ball.buttonMode = true;
 
         ball.anchor.set(.5);
-        ball.width = this.width * .7;
-        ball.height = this.width * .7;
-        ball.scale = .65;
+        ball.scale = .55;
         ball.x = this.width / 2;
-        ball.y = this.height - ball.height / 2 - this.height * .195;
+        ball.y = this.height - ball.height / 2 - this.height * .193;
 
         this.app.stage.addChild(ball);
     }
@@ -115,14 +113,14 @@ export class App {
 
             //BALL
             timeline.to(ball, {
-                y: ball.y - this.height / 9 * 5,
+                y: ball.y - this.height / 7 * 3.3,
                 duration: .5,
                 ease: 'power2.out',
             }, 'jump');
             timeline.to(ball.scale, {
                 keyframes: [
-                    {x: .65, y: .8, duration: .1, ease: 'power1.out'},
-                    {x: .65, y: .65, duration: .2, ease: 'bounce.out'},
+                    {x: .55, y: .8, duration: .1, ease: 'power1.out'},
+                    {x: .55, y: .55, duration: .2, ease: 'bounce.out'},
                 ],
             }, 'jump+=0');
             timeline.to(ball, {
