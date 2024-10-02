@@ -1,8 +1,7 @@
 import Head from "next/head";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {useEffect} from "react";
-import axios from "axios";
-import {setData, setPage} from "@/redux/reducers/content";
+import content, {setPage, useContent} from "@/redux/reducers/content";
 import Authorization from "@/components/authorization/Authorization";
 import {CSSTransition, SwitchTransition} from "react-transition-group";
 import Game from "@/components/game/Game";
@@ -10,7 +9,7 @@ import {formContent} from "@/constants/content";
 
 export default function Home() {
     const dispatch = useDispatch();
-    const {page} = useSelector((state) => state.content);
+    const {page} = useContent();
 
     const component = {
         authorization: <Authorization {...formContent}/>,
@@ -18,10 +17,7 @@ export default function Home() {
     }
 
     useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/todos")
-            .then((res) => dispatch(setData(res.data)))
-            .catch((err) => console.log('ERR ---> ', err))
-
+        dispatch(content.thunks.getData());
         const user = JSON.parse(window?.localStorage?.getItem('user'));
         if (user) dispatch(setPage('game'));
     },[]);

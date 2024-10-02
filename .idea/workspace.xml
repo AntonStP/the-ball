@@ -4,20 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(app): уменьшен мяч">
-      <change afterPath="$PROJECT_DIR$/src/components/authorizationForm/AuthorizationForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/authorizationForm/AuthorizationForm.scss" afterDir="false" />
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(AuthorizationForm): переписано на слоты">
+      <change afterPath="$PROJECT_DIR$/src/api/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/requests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/requests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/api/ApiError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/api/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/redux/RequestsBuilder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/redux/builder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/redux/requestReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/storage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseComponents/form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseComponents/form/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/braces/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/braces/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fill-range/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fill-range/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-extglob/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-extglob/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-glob/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-glob/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-number/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-number/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map-js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/to-regex-range/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/to-regex-range/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authorization/Authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authorization/Authorization.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Authorization.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_form/Form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authorizationForm/AuthorizationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorizationForm/AuthorizationForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/form-styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/form-styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +71,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "D:/my-projects/the-ball/src/components/authorizationForm",
+    "last_opened_file_path": "D:/my-projects/the-ball/src/utils",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,11 +85,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\my-projects\the-ball\src\components\authorizationForm" />
+      <recent name="D:\my-projects\the-ball\src\utils" />
       <recent name="D:\my-projects\the-ball\src\constants" />
-      <recent name="D:\my-projects\the-ball\src\baseComponents" />
-      <recent name="D:\my-projects\the-ball\public\assets" />
-      <recent name="D:\my-projects\the-ball\src\components" />
+      <recent name="D:\my-projects\the-ball\src" />
+      <recent name="D:\my-projects\the-ball\src\redux\reducers" />
+      <recent name="D:\my-projects\the-ball\src\components\authorizationForm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\my-projects\the-ball\public\assets" />
@@ -132,7 +147,7 @@
       <workItem from="1726219544561" duration="35000" />
       <workItem from="1726222238012" duration="1255000" />
       <workItem from="1727795672940" duration="4338000" />
-      <workItem from="1727861203592" duration="5434000" />
+      <workItem from="1727861203592" duration="22691000" />
     </task>
     <task id="LOCAL-00001" summary="chore: исправлена структура проекта">
       <option name="closed" value="true" />
@@ -310,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727796236976</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="chore(AuthorizationForm): переписано на слоты">
+      <option name="closed" value="true" />
+      <created>1727866795473</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1727866795473</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,6 +373,7 @@
     <MESSAGE value="chore(app): скейл стейджа при ресайзе" />
     <MESSAGE value="chore(app): убрана туду" />
     <MESSAGE value="chore(app): уменьшен мяч" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(app): уменьшен мяч" />
+    <MESSAGE value="chore(AuthorizationForm): переписано на слоты" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(AuthorizationForm): переписано на слоты" />
   </component>
 </project>

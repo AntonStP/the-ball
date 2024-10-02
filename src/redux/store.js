@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import contentSlice from './reducers/content';
+import requests from "@/redux/reducers/requests";
+import content from "@/redux/reducers/content";
 
 export const store = configureStore({
     reducer: {
-        content: contentSlice,
+        [requests.name]: requests.reducer,
+        [content.name]: content.reducer,
     },
 });
