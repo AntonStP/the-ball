@@ -6,13 +6,14 @@ import {setData, setPage} from "@/redux/reducers/content";
 import Authorization from "@/components/authorization/Authorization";
 import {CSSTransition, SwitchTransition} from "react-transition-group";
 import Game from "@/components/game/Game";
+import {formContent} from "@/constants/content";
 
 export default function Home() {
     const dispatch = useDispatch();
     const {page} = useSelector((state) => state.content);
 
     const component = {
-        authorization: <Authorization/>,
+        authorization: <Authorization {...formContent}/>,
         game: <Game/>
     }
 

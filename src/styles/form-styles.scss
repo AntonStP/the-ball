@@ -76,14 +76,9 @@ input[type="button"]:active,
 input[type="submit"]:active {
   transition: 0.3s all;
   transform: translateY(3px);
-  border: 1px solid transparent;
   opacity: 0.8;
 }
 
-button:disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
 
 input[type="button"]:hover {
   transition: 0.3s all;
@@ -119,9 +114,14 @@ button {
   display: block;
   appearance: none;
   margin-top: 40px;
-  border: 1px solid #333;
   margin-bottom: 20px;
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }

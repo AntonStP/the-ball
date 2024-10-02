@@ -1,5 +1,29 @@
+import {name, password} from "@/constants/form";
+
 export const formContent = {
     inputs: [
+        {
+            labelProps: {
+                className: 'authorization-form__label'
+            },
+            className: 'authorization-form__input input',
+            label: 'username',
+            type: 'text',
+            name: 'username',
+            rules: name()
+        },
+        {
+            labelProps: {
+                className: 'authorization-form__label'
+            },
+            className: 'authorization-form__input',
+            label: 'password',
+            type: 'password',
+            name: 'password',
+            rules: password()
+        }
+    ],
+    _inputs: [
         {
             name: 'username',
             type: 'text',
@@ -41,7 +65,7 @@ export const formContent = {
     ],
     button: {
         attr: {
-            className: 'form__button button_submit',
+            className: 'authorization-form__button button_submit button',
             type: 'submit',
             text: 'Подтвердить'
         }

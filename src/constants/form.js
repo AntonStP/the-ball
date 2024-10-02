@@ -41,13 +41,13 @@ export function name(getValue) {
       if (!val) {
         return REQUIRED_MESSAGE
       }
-      if (/^[A-Za-z][A-Za-z0-9]*$/.test(val)) {
+      if (!/^[A-Za-z][A-Za-z0-9]*$/.test(val)) {
         return 'Имя может содержать только буквы и цифры, первый символ должен быть буквой';
       }
       if (val.length < 3) {
         return 'Имя должно быть не менее 3 символов';
       }
-      if (val.length < 12) {
+      if (val.length > 20) {
         return 'Длина имени не должна превышать 20 символов';
       }
       return true;

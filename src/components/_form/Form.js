@@ -12,7 +12,7 @@ export default function Form(props) {
     //TODO: try catch на локал сторадж
 
     const dispatch = useDispatch();
-    const {inputs, button} = formContent;
+    const {_inputs, button} = formContent;
     const {
         register,
         formState: {
@@ -39,7 +39,7 @@ export default function Form(props) {
 
     return (
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-            {inputs.map(({name,registerOptions, ...rest}, id) => (
+            {_inputs.map(({name,registerOptions, ...rest}, id) => (
                 <div className={"form__input"} key={`input-${id}`}>
                     <label>
                         {name}
