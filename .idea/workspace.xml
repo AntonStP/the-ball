@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(content): исправлена запись в локал стор">
+    <list default="true" id="852d12af-ded2-4609-8f28-e9c8cdae8aae" name="Changes" comment="chore(app): исправлены ворнинги pixi на страный синтаксис">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +124,7 @@
       <workItem from="1727795672940" duration="4338000" />
       <workItem from="1727861203592" duration="25351000" />
       <workItem from="1727950899631" duration="489000" />
-      <workItem from="1727966583532" duration="2436000" />
+      <workItem from="1727966583532" duration="3334000" />
     </task>
     <task id="LOCAL-00001" summary="chore: исправлена структура проекта">
       <option name="closed" value="true" />
@@ -335,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727968454871</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="chore(index, content): обращение к локал стору покрыто try/catch">
+      <option name="closed" value="true" />
+      <created>1727969228651</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1727969228651</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,8 +360,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: прокинут стор" />
-    <MESSAGE value="chore(): запрос данных" />
     <MESSAGE value="chore(Authorization): компонент для формы" />
     <MESSAGE value="chore(Button): компонент для кнопки" />
     <MESSAGE value="chore(Form): компонент для формы" />
@@ -378,6 +383,8 @@
     <MESSAGE value="chore(): переделаны запросы" />
     <MESSAGE value="chore(main): возвращает запрос" />
     <MESSAGE value="chore(content): исправлена запись в локал стор" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(content): исправлена запись в локал стор" />
+    <MESSAGE value="chore(index, content): обращение к локал стору покрыто try/catch" />
+    <MESSAGE value="chore(app): исправлены ворнинги pixi на страный синтаксис" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(app): исправлены ворнинги pixi на страный синтаксис" />
   </component>
 </project>

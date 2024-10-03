@@ -75,10 +75,9 @@ export class App {
 
     addShadow() {
         const shadow = new Graphics();
-        shadow.name = 'shadow';
-        shadow.fill(0x000000, .2);
+        shadow.label = 'shadow';
         shadow.ellipse(0, 0, 60, 10); // Параметры: x, y, ширина, высота
-        shadow.fill();
+        shadow.fill({color: 0x000000, alpha: .2});
 
         shadow.x = this.width / 2;
         shadow.y = this.height - shadow.height / 2 - this.height * .187;
@@ -88,7 +87,7 @@ export class App {
 
     addBall() {
         const ball = Sprite.from('ball');
-        ball.name = 'ball';
+        ball.label = 'ball';
 
         ball.interactive = true;
         ball.buttonMode = true;
