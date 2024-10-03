@@ -37,14 +37,13 @@ const builder = new RequestsBuilder({
     }
 }).addExtraReducer({
     ["requests/form/submit/fulfilled"]: (state, action) => {
-        window.localStorage.setItem('user', JSON. stringify(action.payload.data));
+        window.localStorage.setItem('user', JSON. stringify(action?.payload));
         state.page = 'game';
     }
 }).createExtraReducer({
     thunkName: 'content/getData',
     thunkExtraName: 'getData',
     saveData(state, {payload}) {
-        console.log('payload ----->  ', payload);
         state.data = payload;
     },
     func: getData
