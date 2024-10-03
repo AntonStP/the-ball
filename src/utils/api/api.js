@@ -71,10 +71,8 @@ export function send({apiMethod, sign, data, ...params}) {
  */
 function onSuccess(response) {
   const {data} = response;
-  if (ApiError.isError(data)) {
-    throw ApiError.fromApiResponse(data);
-  }
-  return data.data;
+
+  return data;
 }
 
 function onFail(error) {

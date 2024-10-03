@@ -17,6 +17,7 @@ export default function Home() {
     }
 
     useEffect(() => {
+        // console.log('FQQESE');
         dispatch(content.thunks.getData());
         const user = JSON.parse(window?.localStorage?.getItem('user'));
         if (user) dispatch(setPage('game'));
