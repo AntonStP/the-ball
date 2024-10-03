@@ -37,7 +37,18 @@ const builder = new RequestsBuilder({
     }
 }).addExtraReducer({
     ["requests/form/submit/fulfilled"]: (state, action) => {
-        window.localStorage.setItem('user', JSON. stringify(action?.payload));
+        try {
+            window.localStorage.setItem('user', JSON. stringify(action?.payload));
+        } catch (error) {
+            if (error instanceof SyntaxError) {
+                console.error("Error parsing JSON data from localStorage. Data might be corrupted.", error);
+            } else if (error instanceof TypeError) {
+                console.error("localStorage is not supported in this environment.", error);
+            } else {
+                console.error("An unknown error occurred while reading from localStorage:", error);
+            }
+            return null;
+        }
         state.page = 'game';
     }
 }).createExtraReducer({

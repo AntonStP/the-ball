@@ -18,7 +18,18 @@ export default function Home() {
 
     useEffect(() => {
         dispatch(content.thunks.getData());
-        const user = JSON.parse(window?.localStorage?.getItem('user'));
+        let user = null;
+        try {
+            user = JSON.parse(window?.localStorage?.getItem('user'));
+        } catch (error) {
+            if (error instanceof DOMException && error.code === 22) {
+                console.error("LocalStorage quota exceeded. Unable to save data.");
+            } else if (error instanceof TypeError) {
+                console.error("localStorage is not supported in this environment.");
+            } else {
+                console.error("An unknown error occurred while saving to localStorage:", error);
+            }
+        }
         if (user) dispatch(setPage('game'));
     },[]);
 
