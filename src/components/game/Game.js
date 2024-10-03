@@ -11,13 +11,10 @@ export default function Game(props) {
     const appRef = useRef(null);
     const {currentTitle,data} = useSelector((state) => state.content);
 
-
     useEffect(() => {
         if (appRef.current) return;
         new App(sceneRef, appRef, ()=> dispatch(setCurrentTitle(currentTitle)));
     }, []);
-
-
 
 
     return (

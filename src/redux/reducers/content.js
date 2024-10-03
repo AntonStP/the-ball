@@ -7,6 +7,7 @@ const builder = new RequestsBuilder({
     initialState: {
         page: "authorization",
         data: null,
+        dataOriginal: null,
         currentTitle: '',
     },
     reducers: {
@@ -20,18 +21,16 @@ const builder = new RequestsBuilder({
             state.user = action.payload;
         },
         setCurrentTitle: (state) => {
-            //TODO: обновить массив, когда закончится
             const data = state.data;
             if (data === null) return;
-            if (state.data?.length === 1) {
-                state.currentTitle = data[0].title;
-                return;
-            }
-
             const index = selectIndex(state.data);
 
             state.data = [...data.slice(0, index), ...data.slice(index + 1, data.length)];
             state.currentTitle = data[index].title;
+
+            if (state.data?.length === 0) {
+                state.data = state.dataOriginal;
+            }
         }
 
     }
@@ -56,6 +55,7 @@ const builder = new RequestsBuilder({
     thunkExtraName: 'getData',
     saveData(state, {payload}) {
         state.data = payload;
+        state.dataOriginal = payload;
     },
     func: getData
 });

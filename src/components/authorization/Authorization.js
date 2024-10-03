@@ -4,8 +4,7 @@ import Button from "@/components/button/Button";
 import AuthorizationForm from "@/components/authorizationForm/AuthorizationForm";
 import {useCallback, useState} from "react";
 import {useDispatch} from "react-redux";
-import requests, {useRequestData, useRequests} from "@/redux/reducers/requests";
-import {setPage, setUser} from "@/redux/reducers/content";
+import requests from "@/redux/reducers/requests";
 
 export default function Authorization({inputs, button}) {
     const dispatch = useDispatch();
