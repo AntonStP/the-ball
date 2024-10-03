@@ -1,7 +1,8 @@
 const {Application, Assets, Graphics, Sprite, Texture, TilingSprite} = await import('pixi.js');
 const {gsap} = await import('gsap');
 
-
+//TODO: динамический импорт должен быть не тут, они импортятся щас сразу как  app импортится
+//TODO: запрос заголовков перенести в слайсу request
 export class App {
     constructor(sceneRef, appRef, setCurrentTitle) {
         this.sceneRef = sceneRef;
